@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Rampart One', cursive;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: #fff;
+  background: #000;
+}
+ul {
+  list-style: none;
+}
+.wrap {
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+img {
+  max-width: 30%;
+  height: auto;
+}
