@@ -3,10 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font-size: 62.5%;
+}
 body {
-  font-family: 'Rampart One', cursive;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   line-height: 1.2;
   color: #fff;
   background: #000;
@@ -15,11 +18,76 @@ ul {
   list-style: none;
 }
 .wrap {
-  max-width: 50%;
+  max-width: 60rem;
   margin: 0 auto;
-  padding: 50px 0;
+  padding: 5rem 2rem;
 }
 img {
-  max-width: 30%;
+  max-width: 0;
   height: auto;
+  display: block;
+  transform: scale(0);
+  transition: transform 0.3s ease-in;
+}
+label {
+  cursor: pointer;
+}
+input {
+  display: none;
+}
+.title {
+  font-size: 3rem;
+  padding: 2rem 0;
+}
+.accordion {
+  cursor: pointer;
+}
+.button {
+  display: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1.6rem;
+  color: #fff;
+}
+.accordion__item {
+  border-top: 0.1rem solid #fff;
+}
+.accordion__header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: 2rem 1rem;
+}
+.accordion__title {
+  font-size: 1.6rem;
+}
+
+input:checked ~ label img {
+  transform: scale(1);
+  max-width: 80%;
+  margin: 1rem auto;
+}
+input:checked ~ label .accordion__title {
+  color: rgb(221, 112, 112);
+}
+input:checked ~ label button {
+  transform: rotate(45deg);
+}
+.accordion:hover .accordion__title {
+  color: rgb(221, 112, 112);
+}
+.accordion:hover button {
+  display: block;
+}
+.accordion__item:hover img {
+  margin: 1rem auto;
+  max-width: 80%;
+  transform: scale(1);
+}
+.accordion__item:hover button {
+  transform: rotate(45deg);
 }
